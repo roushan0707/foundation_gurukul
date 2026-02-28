@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foundation Gurukul – Excellence in Education</title>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-logo-icon">🪔</div>
+    <div class="nav-title">Foundation <span>Gurukul</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#director">Director</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#course-details">Course Details</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20know%20more%20about%20Foundation%20Gurukul." target="_blank" class="nav-wa">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🪔 Where Knowledge Meets Dedication</div>
+    <h1>Student<span class="highlight">Never Fails</span><br>Only Parents and Teachers Do</h1>
+    <p>Foundation Gurukul offers comprehensive coaching for Class 10th and 12th students under both CBSE and CISCE boards — all subjects, expert guidance, and personalized attention.</p>
+    <div class="hero-btns">
+      <a href="#courses" class="btn btn-primary">📚 Explore Courses</a>
+      <a href="gallery.html" class="btn btn-outline">🏆 View Toppers</a>
+      <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enroll%20my%20child%20at%20Foundation%20Gurukul." target="_blank" class="btn btn-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Quick Enquiry
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">150+</div><div class="stat-label">Students Coached</div></div>
+      <div class="stat"><div class="stat-num">96%</div><div class="stat-label">Success Rate</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Boards Covered</div></div>
+      <div class="stat"><div class="stat-num">All</div><div class="stat-label">Subjects Offered</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">A Gurukul Built on Trust, <br>Discipline & Results</h2>
+      <p class="section-sub">We believe every child has the potential to shine. We provide the structure, guidance, and environment to help them reach it.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">📖</div>
+        <div class="why-title">Board-Specific Teaching</div>
+        <div class="why-desc">Curriculum designed specifically for CBSE and CISCE patterns. Students choose their board, we teach accordingly.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👨‍🏫</div>
+        <div class="why-title">Expert Faculty</div>
+        <div class="why-desc">Experienced subject teachers who know how to break down complex concepts into easy, memorable lessons.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🧒</div>
+        <div class="why-title">Small Batch Sizes</div>
+        <div class="why-desc">Limited students per batch ensures every child gets personal attention, doubt clearing, and focused learning.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📱</div>
+        <div class="why-title">Parent Updates on WhatsApp</div>
+        <div class="why-desc">Regular updates on your child's progress, test scores, and attendance — straight to your WhatsApp.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📝</div>
+        <div class="why-title">Regular Mock Tests</div>
+        <div class="why-desc">Frequent assessments modelled on board exam patterns build confidence and exam temperament.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏡</div>
+        <div class="why-title">Safe & Nurturing Space</div>
+        <div class="why-desc">A positive, distraction-free environment where students feel motivated to study and grow every day.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTOR SECTION -->
+<section id="director" class="director-bg">
+  <div class="section-inner">
+    <div class="director-layout">
+
+      <!-- Left: Photo placeholder -->
+      <div class="director-photo-col">
+        <div class="director-photo-frame">
+          <div class="director-photo-placeholder">
+            <!-- ✏️ REPLACE: swap the emoji + text below with an <img> tag pointing to the director's actual photo -->
+            <!-- Example: <img src="images/director.jpg" alt="Director Name" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"> -->
+            <div class="director-photo-icon">👨‍🏫</div>
+            <div class="director-photo-hint">Add Director's Photo here</div>
+          </div>
+          <div class="director-photo-badge">
+            <span class="dir-badge-icon">🪔</span>
+            <span>Founder & Director</span>
+          </div>
+        </div>
+        <!-- Quote card below photo -->
+        <div class="director-quote-card">
+          <div class="dir-quote-mark">"</div>
+          <p>Education is not the filling of a pail, but the lighting of a fire. At Foundation Gurukul, we light that fire in every child.</p>
+          <div class="dir-quote-author">— Director, Foundation Gurukul</div>
+        </div>
+      </div>
+
+      <!-- Right: Details -->
+      <div class="director-details-col">
+        <div class="section-tag">Meet Our Director</div>
+        <h2 class="section-title director-title">The Vision Behind<br><span class="dir-name-highlight">Foundation Gurukul</span></h2>
+        <p class="director-intro">
+          <!-- ✏️ REPLACE: Update name, bio and experience details below -->
+          With over two decades of dedication to education, our Director has shaped hundreds of young minds across some of India's most reputed institutions. His philosophy is simple — every student deserves personal attention, structured learning, and a teacher who believes in them.
+        </p>
+
+        <!-- Experience Timeline -->
+        <div class="exp-timeline">
+          <div class="section-tag" style="margin-bottom: 20px;">Past Experience</div>
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-content">
+              <div class="exp-year">2010 – 2018</div>
+              <div class="exp-role">Senior Faculty — Mathematics & Science</div>
+              <!-- ✏️ REPLACE: Update institution name -->
+              <div class="exp-inst">Delhi Public School, New Delhi</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-content">
+              <div class="exp-year">2006 – 2010</div>
+              <div class="exp-role">Academic Coordinator</div>
+              <div class="exp-inst">St. Xavier's High School, Patna</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-content">
+              <div class="exp-year">2002 – 2006</div>
+              <div class="exp-role">Subject Teacher — ICSE Board</div>
+              <div class="exp-inst">La Martiniere College, Lucknow</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-content">
+              <div class="exp-year">2018 – Present</div>
+              <div class="exp-role">Founder & Director</div>
+              <div class="exp-inst">Foundation Gurukul</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credentials row -->
+        <div class="dir-credentials">
+          <div class="dir-cred-item">
+            <div class="dir-cred-num">20+</div>
+            <div class="dir-cred-label">Years in Education</div>
+          </div>
+          <div class="dir-cred-item">
+            <div class="dir-cred-num">500+</div>
+            <div class="dir-cred-label">Students Mentored</div>
+          </div>
+          <div class="dir-cred-item">
+            <div class="dir-cred-num">B.Ed, M.Sc</div>
+            <div class="dir-cred-label">Qualifications</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="courses-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag" style="background:rgba(232,99,10,0.2); border-color:rgba(232,99,10,0.4);">Our Courses</div>
+      <h2 class="section-title">Comprehensive Coaching <br>for Class 10 & 12</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.55);">Choose your board — CBSE or CISCE — and we handle the rest with complete subject coverage.</p>
+    </div>
+
+    <div class="courses-tabs">
+      <button class="tab-btn active" onclick="showTab('tab-10')">Class 10th</button>
+      <button class="tab-btn" onclick="showTab('tab-12')">Class 12th</button>
+    </div>
+
+    <div id="tab-10" class="course-panel active">
+      <div class="course-card">
+        <div class="course-board board-cbse">CBSE</div>
+        <div class="course-name">Class 10 — CBSE</div>
+        <div class="course-desc">Complete preparation for CBSE Class 10 Board Exams with full syllabus coverage, NCERT-based teaching, and sample paper practice.</div>
+        <div class="course-subjects">
+          <span class="subj-tag">Mathematics</span><span class="subj-tag">Science</span><span class="subj-tag">English</span><span class="subj-tag">Social Science</span><span class="subj-tag">Hindi</span>
+        </div>
+        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2010%20CBSE%20coaching." target="_blank" class="course-enquire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+
+      <div class="course-card">
+        <div class="course-board board-icse">CISCE / ICSE</div>
+        <div class="course-name">Class 10 — ICSE</div>
+        <div class="course-desc">Focused preparation for ICSE Class 10 with detailed coverage of all subjects, internal assessment preparation, and extensive writing practice.</div>
+        <div class="course-subjects">
+          <span class="subj-tag">Mathematics</span><span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Biology</span><span class="subj-tag">English I & II</span><span class="subj-tag">History & Civics</span>
+        </div>
+        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2010%20ICSE%20coaching." target="_blank" class="course-enquire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div id="tab-12" class="course-panel">
+      <div class="course-card">
+        <div class="course-board board-cbse">CBSE</div>
+        <div class="course-name">Class 12 — CBSE (Science)</div>
+        <div class="course-desc">Complete Science stream coaching aligned with CBSE Class 12 board pattern. Includes theory, practicals guidance, and sample paper solving.</div>
+        <div class="course-subjects">
+          <span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">English</span>
+        </div>
+        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2012%20CBSE%20Science%20coaching." target="_blank" class="course-enquire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+
+      <div class="course-card">
+        <div class="course-board board-cbse">CBSE</div>
+        <div class="course-name">Class 12 — CBSE (Commerce)</div>
+        <div class="course-desc">Commerce stream preparation with a focus on Accountancy, Economics, Business Studies, and Mathematics to ensure high board scores.</div>
+        <div class="course-subjects">
+          <span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span><span class="subj-tag">Business Studies</span><span class="subj-tag">Mathematics</span><span class="subj-tag">English</span>
+        </div>
+        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2012%20CBSE%20Commerce%20coaching." target="_blank" class="course-enquire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+
+      <div class="course-card">
+        <div class="course-board board-icse">CISCE / ISC</div>
+        <div class="course-name">Class 12 — ISC (Science)</div>
+        <div class="course-desc">In-depth ISC Science coaching covering detailed theory, application-based learning, and structured preparation for ISC board exams.</div>
+        <div class="course-subjects">
+          <span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">English</span><span class="subj-tag">Computer Sc.</span>
+        </div>
+        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2012%20ISC%20coaching." target="_blank" class="course-enquire">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE DETAILS -->
+<section id="course-details" class="details-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Course Details</div>
+      <h2 class="section-title">Everything You Need to Know</h2>
+      <p class="section-sub">Here's a complete picture of what your child will experience at Foundation Gurukul.</p>
+    </div>
+    <div class="details-grid">
+      <div class="details-image-block">
+        <h3>A Space Crafted for Learning</h3>
+        <p>At Foundation Gurukul, every detail of how we teach is designed to maximize your child's understanding, confidence, and board exam performance.</p>
+        <div class="detail-items">
+          <div class="detail-item">
+            <div class="detail-icon">🏫</div>
+            <div><div class="detail-label">Mode of Teaching</div><div class="detail-val">Offline batches (centre-based) with digital support materials</div></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📅</div>
+            <div><div class="detail-label">Batch Duration</div><div class="detail-val">Academic year-long batches aligned with board exam schedule</div></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">👥</div>
+            <div><div class="detail-label">Batch Size</div><div class="detail-val">Maximum 15 students per batch for personal attention</div></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📋</div>
+            <div><div class="detail-label">Boards Covered</div><div class="detail-val">CBSE and CISCE (ICSE / ISC) — student's choice</div></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📞</div>
+            <div><div class="detail-label">Parent Communication</div><div class="detail-val">Regular progress updates via WhatsApp, PTM every month</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="details-list-side">
+        <div>
+          <div class="details-section-title">What's Included</div>
+          <ul class="checklist">
+            <li>Full syllabus coverage as per board guidelines</li>
+            <li>Chapter-wise notes and practice sheets</li>
+            <li>Regular unit tests and mock exams</li>
+            <li>Dedicated doubt-clearing sessions</li>
+            <li>Previous year question paper practice</li>
+            <li>Exam time management strategies</li>
+            <li>Individual performance tracking & reports</li>
+            <li>WhatsApp updates to parents on test performance</li>
+          </ul>
+        </div>
+        <div>
+          <div class="details-section-title">Batch Timings</div>
+          <div class="schedule-cards">
+            <div class="sched-card">
+              <div class="sched-title">⏰ Morning Batch</div>
+              <div class="sched-info">Mon – Sat<br>7:00 AM – 9:00 AM<br><em>(Class 10)</em></div>
+            </div>
+            <div class="sched-card">
+              <div class="sched-title">🌆 Evening Batch</div>
+              <div class="sched-info">Mon – Sat<br>5:00 PM – 7:00 PM<br><em>(Class 12)</em></div>
+            </div>
+            <div class="sched-card">
+              <div class="sched-title">📅 Weekend Batch</div>
+              <div class="sched-info">Sat – Sun<br>9:00 AM – 1:00 PM<br><em>(Both classes)</em></div>
+            </div>
+            <div class="sched-card">
+              <div class="sched-title">🔖 Special Batch</div>
+              <div class="sched-info">Pre-Board Intensive<br>Nov – Feb<br><em>(Crash course)</em></div>
+            </div>
+          </div>
+        </div>
+        <div class="coming-soon-strip">
+          <div class="cs-icon">🚀</div>
+          <div>
+            <div class="cs-title">Coming Soon — Class 7th to 9th!</div>
+            <div class="cs-sub">We're expanding our coaching to Class 7th, 8th, and 9th. Stay tuned and be the first to enroll!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPPER PREVIEW -->
+<section class="toppers-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Our Stars</div>
+      <h2 class="section-title">Toppers Who Made Us Proud</h2>
+      <p class="section-sub">These are our students who worked hard and aced their board exams. Your child could be next!</p>
+    </div>
+    <div class="toppers-grid">
+      <div class="topper-card">
+        <div class="topper-img-wrap">
+          <div class="topper-avatar">👦</div>
+          <div class="topper-badge">🏆 Class 10</div>
+        </div>
+        <div class="topper-info">
+          <div class="topper-name">Aryan Sharma</div>
+          <div class="topper-marks">98.4% <span>/ 100</span></div>
+          <div class="topper-meta">CBSE Class 10 · 2024</div>
+        </div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-img-wrap">
+          <div class="topper-avatar" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">👧</div>
+          <div class="topper-badge">🥇 Class 12</div>
+        </div>
+        <div class="topper-info">
+          <div class="topper-name">Priya Gupta</div>
+          <div class="topper-marks">96.6% <span>/ 100</span></div>
+          <div class="topper-meta">ISC Class 12 · 2024</div>
+        </div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-img-wrap">
+          <div class="topper-avatar" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">🧑</div>
+          <div class="topper-badge">⭐ Class 10</div>
+        </div>
+        <div class="topper-info">
+          <div class="topper-name">Rohan Mehta</div>
+          <div class="topper-marks">97.2% <span>/ 100</span></div>
+          <div class="topper-meta">ICSE Class 10 · 2023</div>
+        </div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-img-wrap">
+          <div class="topper-avatar" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">👧</div>
+          <div class="topper-badge">🥈 Class 12</div>
+        </div>
+        <div class="topper-info">
+          <div class="topper-name">Sneha Das</div>
+          <div class="topper-marks">94.8% <span>/ 100</span></div>
+          <div class="topper-meta">CBSE Class 12 · 2023</div>
+        </div>
+      </div>
+    </div>
+    <a href="gallery.html" class="view-gallery-btn">🏆 View Full Toppers Gallery →</a>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div>
+    <h2>Ready to Give Your Child the Best Start?</h2>
+    <p>Reach out today for a free counselling session. We'll guide you to the right course, board, and batch for your child.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enroll%20my%20child%20at%20Foundation%20Gurukul.%20Please%20guide%20me." target="_blank" class="btn" style="background:#fff; color: var(--saffron); font-weight:800;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp Now
+      </a>
+      <a href="/cdn-cgi/l/email-protection#20464f554e444154494f4e475552554b4f4f4c60474d41494c0e434f4d" class="btn" style="background: rgba(255,255,255,0.2); color: var(--white); border: 2px solid rgba(255,255,255,0.5);">
+        ✉️ Send an Email
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-brand" style="margin-bottom: 14px; text-decoration:none; display:flex; gap:12px; align-items:center;">
+        <div class="nav-logo-icon">🪔</div>
+        <div class="nav-title" style="font-size:1.3rem;">Foundation <span>Gurukul</span></div>
+      </div>
+      <p>Dedicated coaching for Class 10th and 12th students under CBSE and CISCE boards. We nurture potential, build confidence, and deliver results.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/foundationgurukul" target="_blank" class="social-btn social-fb" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://instagram.com/foundationgurukul" target="_blank" class="social-btn social-ig" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="white" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+        <a href="https://youtube.com/@foundationgurukul" target="_blank" class="social-btn social-yt" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="white"/></svg>
+        </a>
+        <a href="https://wa.me/918145958152?text=Hello%21%20I%20found%20Foundation%20Gurukul%20and%20want%20to%20know%20more." target="_blank" class="social-btn social-wa" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#course-details">Course Details</a></li>
+        <li><a href="gallery.html">Toppers Gallery</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="#courses">Class 10 — CBSE</a></li>
+        <li><a href="#courses">Class 10 — ICSE</a></li>
+        <li><a href="#courses">Class 12 — CBSE (Sci)</a></li>
+        <li><a href="#courses">Class 12 — CBSE (Com)</a></li>
+        <li><a href="#courses">Class 12 — ISC</a></li>
+        <li><a href="#course-details" style="color: rgba(232,99,10,0.7) !important;">Class 7–9 (Coming Soon)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">
+        <div class="fci-icon">✉️</div>
+        <div class="fci-text"><a href="/cdn-cgi/l/email-protection#aec8c1dbc0cacfdac7c1c0c9dbdcdbc5c1c1c2eec9c3cfc7c280cdc1c3"><span class="__cf_email__" data-cfemail="ccaaa3b9a2a8adb8a5a3a2abb9beb9a7a3a3a08caba1ada5a0e2afa3a1">[email&#160;protected]</span></a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">💬</div>
+        <div class="fci-text"><a href="https://wa.me/918145958152" target="_blank">WhatsApp Quick Chat</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">📘</div>
+        <div class="fci-text"><a href="https://facebook.com/foundationgurukul" target="_blank">Facebook Page</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">📸</div>
+        <div class="fci-text"><a href="https://www.instagram.com/foundationgurukool/" target="_blank">Instagram Page</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">▶️</div>
+        <div class="fci-text"><a href="https://youtube.com/@foundationgurukul" target="_blank">YouTube Channel</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Foundation Gurukul. All rights reserved.</div>
+    <div class="footer-legal-links">
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="terms.html#tc-8">Privacy Policy</a>
+      <a href="terms.html#tc-4">Refund Policy</a>
+    </div>
+    <div class="footer-love">Made with <span>❤️</span> for our students</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918145958152?text=Hello%21%20I%20am%20interested%20in%20Foundation%20Gurukul.%20Please%20share%20details." target="_blank" class="float-wa" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="float-wa-label">Chat with us!</div>
+
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function showTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.course-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
