@@ -607,6 +607,15 @@ footer {
   animation: fadeDown 0.7s ease 0.2s both;
 }
 
+/*highlighting the paragraph St. Paul's School */
+
+.highlight-green {
+  background-color: #08100a; 
+  padding: 0 4px; /* Optional: adds a little space around the text */
+  border-radius: 3px; /* Optional: rounds the corners of the highlight */
+  font-size: large;
+}
+
 .hero-btns {
   display: flex;
   gap: 16px;
@@ -1682,10 +1691,10 @@ footer {
 /* Quote card */
 .director-quote-card {
   background: var(--deep);
-  border-radius: 16px;
-  padding: 28px 24px;
+  border-radius: 10px;
+  padding: 20px 15px;
   position: relative;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .dir-quote-mark {
@@ -2645,4 +2654,37 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0;
+}
+
+
+
+
+/* ============================================================
+   27. COURSES — Duration & meta badge row (new)
+   ============================================================ */
+.course-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+
+.course-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.course-meta-badge--orange {
+  background: rgba(232,99,10,0.18);
+  border-color: rgba(232,99,10,0.4);
+  color: #ff8c42;
 }
