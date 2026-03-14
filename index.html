@@ -2,87 +2,60 @@
 <html lang="en">
 <head>
   <meta name="google-site-verification" content="MOljAap06_tWRp4uugVHmM7u36Mb58zMB6kxabq_eHo" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Foundation Gurukul – Excellence in Education</title>
-<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  /* Course meta badges */
-  .course-meta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 10px 0 16px;
-  }
-  .course-meta-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.13);
-    color: rgba(255,255,255,0.75);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 20px;
-  }
-  .course-meta-badge--orange {
-    background: rgba(232,99,10,0.18);
-    border-color: rgba(232,99,10,0.4);
-    color: #ff8c42;
-  }
-  /* Floating WhatsApp */
-  .float-wa {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    z-index: 998;
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 6px 28px rgba(37,211,102,0.55);
-    animation: wa-pulse 2.5s infinite;
-    transition: transform 0.2s;
-  }
-  .float-wa:hover { transform: scale(1.12); }
-  .float-wa svg { display: block; }
-  @keyframes wa-pulse {
-    0%,100% { box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
-    50%      { box-shadow: 0 6px 40px rgba(37,211,102,0.85); }
-  }
-  .float-wa-label {
-    position: fixed;
-    bottom: 100px;
-    right: 28px;
-    z-index: 997;
-    background: #1A1A2E;
-    color: #fff;
-    padding: 7px 14px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(37,211,102,0.3);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-    white-space: nowrap;
-    font-family: 'Nunito', sans-serif;
-  }
-  .float-wa:hover + .float-wa-label { opacity: 1; }
-</style>
-<title>Foundation Gurukul | Best Residential Coaching for Class X & XII</title>
-
-  <meta name="description" content="Foundation Gurukul offers specialized residential coaching for Class X and XII (Science & Commerce) students under CBSE and CISCE Boards. Join for expert-led board preparation.">
-
-  <meta name="keywords" content="Foundation Gurukul, Class 10 coaching, Class 12 Science coaching, Commerce coaching, residential coaching institute, CBSE board preparation,St.Paul's School, Best Coaching in Siliguri">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation Gurukul – Excellence in Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Foundation Gurukul offers specialized residential coaching for Class X and XII students under CBSE and CISCE Boards.">
+  <meta name="keywords" content="Foundation Gurukul, Class 10 coaching, Class 12 Science coaching, residential coaching institute, CBSE board preparation, St.Paul's School, Best Coaching in Siliguri">
   <link rel="canonical" href="https://www.foundationgurukul.com/" />
+  <style>
+    .course-meta-row { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px; }
+    .course-meta-badge { display:inline-flex; align-items:center; gap:5px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.13); color:rgba(255,255,255,0.75); font-size:0.75rem; font-weight:600; padding:4px 10px; border-radius:20px; }
+    .course-meta-badge--orange { background:rgba(232,99,10,0.18); border-color:rgba(232,99,10,0.4); color:#ff8c42; }
+    .float-wa { position:fixed; bottom:28px; right:28px; z-index:998; width:62px; height:62px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 6px 28px rgba(37,211,102,0.55); animation:wa-pulse 2.5s infinite; transition:transform 0.2s; }
+    .float-wa:hover { transform:scale(1.12); }
+    .float-wa svg { display:block; }
+    @keyframes wa-pulse { 0%,100% { box-shadow:0 6px 28px rgba(37,211,102,0.55); } 50% { box-shadow:0 6px 40px rgba(37,211,102,0.85); } }
+    .float-wa-label { position:fixed; bottom:100px; right:28px; z-index:997; background:#1A1A2E; color:#fff; padding:7px 14px; border-radius:8px; font-size:0.8rem; font-weight:600; border:1px solid rgba(37,211,102,0.3); opacity:0; pointer-events:none; transition:opacity 0.2s; white-space:nowrap; font-family:'Nunito',sans-serif; }
+    .float-wa:hover + .float-wa-label { opacity:1; }
+    .highlight-yellow { color:#FFD700; font-weight:800; text-shadow:0 0 18px rgba(255,215,0,0.25); }
+    .course-name { font-family:'Yeseva One',serif !important; font-size:1.55rem !important; color:var(--white); margin-bottom:14px; line-height:1.2; }
+    .courses-bg .section-title { font-size:clamp(2.2rem,4vw,3.2rem) !important; }
+    .tab-btn { font-size:1rem !important; padding:12px 34px !important; }
+    .director-vision-list { display:flex; flex-direction:column; gap:18px; margin:22px 0 28px; }
+    .vision-pillar { display:flex; gap:16px; align-items:flex-start; background:rgba(232,99,10,0.05); border:1px solid rgba(232,99,10,0.12); border-radius:14px; padding:18px 20px; transition:border-color 0.2s,background 0.2s; }
+    .vision-pillar:hover { border-color:rgba(232,99,10,0.3); background:rgba(232,99,10,0.08); }
+    .vision-pillar-num { width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,var(--saffron),var(--gold)); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Yeseva One',serif; font-size:1.1rem; flex-shrink:0; box-shadow:0 4px 12px rgba(232,99,10,0.3); }
+    .vision-pillar-content h4 { font-family:'Yeseva One',serif; font-size:1.05rem; color:var(--deep); margin-bottom:6px; }
+    .vision-pillar-content p { color:var(--muted); font-size:0.87rem; line-height:1.7; margin:0 !important; }
+    .solution-tag { display:inline-block; background:rgba(232,99,10,0.1); color:var(--saffron); border:1px solid rgba(232,99,10,0.2); padding:2px 10px; border-radius:20px; font-size:0.72rem; font-weight:800; letter-spacing:0.5px; margin-bottom:6px; }
+    .director-cta-quote { background:linear-gradient(135deg,var(--deep),var(--navy)); border-radius:16px; padding:22px 26px; border-left:4px solid var(--saffron); margin-top:8px; }
+    .director-cta-quote p { color:rgba(255,255,255,0.8) !important; font-size:0.94rem !important; line-height:1.75 !important; font-style:italic; margin:0 !important; }
+    .director-cta-quote .quote-sign { color:var(--saffron-light); font-weight:800; font-size:0.88rem; display:block; margin-top:10px; font-style:normal; }
+    /* Footer guaranteed styles */
+    footer { background:var(--deep); padding:70px 60px 40px; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; max-width:1200px; margin:0 auto 50px; }
+    .footer-brand p { color:rgba(255,255,255,0.45); font-size:0.85rem; line-height:1.75; max-width:280px; margin-bottom:20px; }
+    .footer-col h4 { color:#fff; font-size:0.9rem; font-weight:800; letter-spacing:0.8px; margin-bottom:18px; padding-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .footer-col ul li a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem; transition:color 0.2s; }
+    .footer-col ul li a:hover { color:var(--saffron-light); }
+    .footer-contact-item { display:flex; gap:10px; align-items:flex-start; margin-bottom:14px; }
+    .fci-icon { margin-top:2px; flex-shrink:0; }
+    .fci-text { color:rgba(255,255,255,0.5); font-size:0.85rem; line-height:1.5; }
+    .fci-text a { color:rgba(255,255,255,0.5); text-decoration:none; }
+    .fci-text a:hover { color:var(--saffron-light); }
+    .footer-bottom { max-width:1200px; margin:0 auto; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+    .footer-copy,.footer-love { color:rgba(255,255,255,0.3); font-size:0.8rem; }
+    .footer-love span { color:var(--saffron-light); }
+    .footer-legal-links { display:flex; gap:20px; flex-wrap:wrap; }
+    .footer-legal-links a { color:rgba(255,255,255,0.4); text-decoration:none; font-size:0.8rem; }
+    .footer-legal-links a:hover { color:var(--saffron-light); }
+    @media(max-width:960px) { footer { padding:60px 24px 30px; } .footer-grid { grid-template-columns:1fr 1fr; gap:32px; } }
+    @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .footer-bottom { flex-direction:column; text-align:center; } }
+  </style>
 </head>
 <body>
 
@@ -117,14 +90,11 @@
   <div class="hero-content">
     <div class="hero-badge">🪔 Where Knowledge Meets Dedication</div>
     <h1>Student<span class="highlight"> Never Fails,</span><br>Only Parents and Teachers Do</h1>
-    <p><span class="highlight-green">"Led by Kunwar Raghavendra Singh (former Science Head of St. Paul's School, Darjeeling)</span> this residential institute prepares boys and girls in Classes X and XII for their CBSE and CISCE Board examinations in the Science and Commerce streams."</p>
+    <p>"<span class="highlight-yellow">Led by Kunwar Raghavendra Singh (former Science Head of St. Paul's School, Darjeeling)</span> this residential institute prepares boys and girls in Classes X and XII for their CBSE and CISCE Board examinations in the Science and Commerce streams."</p>
     <div class="hero-btns">
       <a href="#courses" class="btn btn-primary">📚 Explore Courses</a>
       <a href="gallery.html" class="btn btn-outline">🏆 View Toppers</a>
-      <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enroll%20my%20child%20at%20Foundation%20Gurukul." target="_blank" class="btn btn-wa">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Quick Enquiry
-      </a>
+      <a href="enquiry.html" class="btn btn-wa">📋 Enquiry Form</a>
     </div>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">150+</div><div class="stat-label">Students Coached</div></div>
@@ -140,45 +110,21 @@
   <div class="section-inner">
     <div class="section-header">
       <div class="section-tag">Why Choose Us</div>
-      <h2 class="section-title">A Gurukul Built on Trust, <br>Discipline &amp; Results</h2>
+      <h2 class="section-title">A Gurukul Built on Trust,<br>Discipline &amp; Results</h2>
       <p class="section-sub">We believe every child has the potential to shine. We provide the structure, guidance, and environment to help them reach it.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">📖</div>
-        <div class="why-title">Board-Specific Teaching</div>
-        <div class="why-desc">Curriculum designed specifically for CBSE and CISCE patterns. Students choose their board, we teach accordingly.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">👨‍🏫</div>
-        <div class="why-title">Expert Faculty</div>
-        <div class="why-desc">Experienced subject teachers who know how to break down complex concepts into easy, memorable lessons.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🧒</div>
-        <div class="why-title">Small Batch Sizes</div>
-        <div class="why-desc">Limited students per batch ensures every child gets personal attention, doubt clearing, and focused learning.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">📱</div>
-        <div class="why-title">Parent Updates on WhatsApp</div>
-        <div class="why-desc">Regular updates on your child's progress, test scores, and attendance — straight to your WhatsApp.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">📝</div>
-        <div class="why-title">Regular Mock Tests</div>
-        <div class="why-desc">Frequent assessments modelled on board exam patterns build confidence and exam temperament.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🏡</div>
-        <div class="why-title">Safe &amp; Nurturing Space</div>
-        <div class="why-desc">A positive, distraction-free environment where students feel motivated to study and grow every day.</div>
-      </div>
+      <div class="why-card"><div class="why-icon">📖</div><div class="why-title">Board-Specific Teaching</div><div class="why-desc">Curriculum designed specifically for CBSE and CISCE patterns. Students choose their board, we teach accordingly.</div></div>
+      <div class="why-card"><div class="why-icon">👨‍🏫</div><div class="why-title">Expert Faculty</div><div class="why-desc">Experienced subject teachers who know how to break down complex concepts into easy, memorable lessons.</div></div>
+      <div class="why-card"><div class="why-icon">🧒</div><div class="why-title">Small Batch Sizes</div><div class="why-desc">Limited students per batch ensures every child gets personal attention, doubt clearing, and focused learning.</div></div>
+      <div class="why-card"><div class="why-icon">📱</div><div class="why-title">Parent Updates on WhatsApp</div><div class="why-desc">Regular updates on your child's progress, test scores, and attendance — straight to your WhatsApp.</div></div>
+      <div class="why-card"><div class="why-icon">📝</div><div class="why-title">Regular Mock Tests</div><div class="why-desc">Frequent assessments modelled on board exam patterns build confidence and exam temperament.</div></div>
+      <div class="why-card"><div class="why-icon">🏡</div><div class="why-title">Safe &amp; Nurturing Space</div><div class="why-desc">A positive, distraction-free environment where students feel motivated to study and grow every day.</div></div>
     </div>
   </div>
 </section>
 
-<!-- DIRECTOR SECTION -->
+<!-- DIRECTOR -->
 <section id="director" class="director-bg">
   <div class="section-inner">
     <div class="director-layout">
@@ -188,36 +134,52 @@
             <div class="director-photo-icon">👨‍🏫</div>
             <div class="director-photo-hint"><img src="images/Directors pic.jpeg" alt="Director"></div>
           </div>
-          <div class="director-photo-badge">
-            <span class="dir-badge-icon"></span>
-            <span>Founder &amp; Director</span>
-          </div>
+          <div class="director-photo-badge"><span class="dir-badge-icon"></span><span>Founder &amp; Director</span></div>
         </div>
         <div class="director-quote-card">
           <div class="dir-quote-mark">"</div>
-          <p>Ex Science Head of St. Paul's School, Darjeeling. Served For 33 Years. Ph.D in Chemistry, Msc. Patna Science College [Gold Medalist], Ex. HOD Chemistry P.N.K College Paliganj, Bihar </p>
+          <p>Ex Science Head of St. Paul's School, Darjeeling. Served For 33 Years. Ph.D in Chemistry, Msc. Patna Science College [Gold Medalist], Ex. HOD Chemistry P.N.K College Paliganj, Bihar</p>
           <div class="dir-quote-author"></div>
         </div>
       </div>
       <div class="director-details-col">
         <div class="section-tag">Meet Our Director</div>
         <h2 class="section-title director-title">The Vision Behind<br><span class="dir-name-highlight">Foundation Gurukul</span></h2>
-        <p class="director-intro">
-          With over three decades of dedication to education, our Director has shaped hundreds of young minds across some of India's most reputed institutions. His philosophy is simple — every student deserves personal attention, structured learning, and a teacher who believes in them.
-        </p>
-        <div class="dir-credentials">
-          <div class="dir-cred-item">
-            <div class="dir-cred-num">30+</div>
-            <div class="dir-cred-label">Years in Education</div>
+        <p class="director-intro">Drawing from <strong>40 years of teaching</strong> at prestigious institutions — including the historic St. Paul's School, Darjeeling, top IIT/NIT coaching centres in Patna, and P.N.K. College — our Director has observed a consistent truth: <em>over 90% of students can achieve their dreams if a specific academic formula is followed.</em></p>
+        <div class="director-vision-list">
+          <div class="vision-pillar">
+            <div class="vision-pillar-num">1</div>
+            <div class="vision-pillar-content">
+              <span class="solution-tag">🏗️ Foundation Course</span>
+              <h4>Strengthening the Foundation</h4>
+              <p>If a student isn't performing at their peak, it is almost always due to "cracks" in their basic concepts from Classes 7, 8, or 9. Our Foundation Course performs this essential "repair work" in just <strong>30 days</strong> during the Durga Puja vacation, ensuring every student has the clarity needed to move forward.</p>
+            </div>
           </div>
-          <div class="dir-cred-item">
-            <div class="dir-cred-num">1000+</div>
-            <div class="dir-cred-label">Students Mentored</div>
+          <div class="vision-pillar">
+            <div class="vision-pillar-num">2</div>
+            <div class="vision-pillar-content">
+              <span class="solution-tag">⚔️ Preparation Course</span>
+              <h4>Strategic "Commando" Preparation</h4>
+              <p>To break the 90% barrier in Board Exams, casual study isn't enough. It requires a highly disciplined, "commando-style" focus. We offer intensive Preparation Courses every winter (December 4 to February 20), providing the rigorous environment necessary for elite scoring.</p>
+            </div>
           </div>
-          <div class="dir-cred-item">
-            <div class="dir-cred-num">PhD, M.Sc (Gold Medalist)</div>
-            <div class="dir-cred-label">Qualifications</div>
+          <div class="vision-pillar">
+            <div class="vision-pillar-num">3</div>
+            <div class="vision-pillar-content">
+              <span class="solution-tag">🎯 Target Course</span>
+              <h4>Expert Guidance During the Finish Line</h4>
+              <p>The weeks leading up to and during exams are the most critical. Our Target Course provides specialised mentorship during the examination period, ensuring students stay sharp and composed when it matters most.</p>
+            </div>
           </div>
+        </div>
+        <div class="director-cta-quote">
+          <p>Over the last three years, those who have embraced these facts at Foundation Gurukul have reached their dream destinations. <strong>You could be next.</strong> All the best — see you at the top!</p>
+          <span class="quote-sign">— Kunwar Raghavendra Singh, Founder &amp; Director</span>
+        </div>
+        <div class="dir-credentials" style="margin-top:28px;">
+          <div class="dir-cred-item"><div class="dir-cred-num">40+</div><div class="dir-cred-label">Years in Education</div></div>
+          <div class="dir-cred-item"><div class="dir-cred-num">1000+</div><div class="dir-cred-label">Students Mentored</div></div>
+          <div class="dir-cred-item"><div class="dir-cred-num">PhD, M.Sc</div><div class="dir-cred-label">Gold Medalist</div></div>
         </div>
       </div>
     </div>
@@ -239,7 +201,6 @@
 
     <!-- CLASS 10 -->
     <div id="tab-10" class="course-panel active">
-
       <div class="course-card">
         <div class="course-board board-cbse">CBSE &amp; CISCE</div>
         <div class="course-name">Foundation Work — Class 10</div>
@@ -248,52 +209,33 @@
           <span class="course-meta-badge course-meta-badge--orange">During Durga Puja Vacation</span>
         </div>
         <div class="course-desc">We teach lower-class concepts that Class 10 boys and girls require during their final examinations — building a strong conceptual foundation before the exam season begins.</div>
-        <div class="course-subjects">
-          <span class="subj-tag">Mathematics</span><span class="subj-tag">Science</span><span class="subj-tag">English</span><span class="subj-tag">Social Science</span><span class="subj-tag">Hindi</span>
-        </div>
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2010%20Foundation%20Work." target="_blank" class="course-enquire">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enquire on WhatsApp
-        </a>
+        <div class="course-subjects"><span class="subj-tag">Mathematics</span><span class="subj-tag">Science</span><span class="subj-tag">English</span><span class="subj-tag">Social Science</span><span class="subj-tag">Hindi</span></div>
+        <a href="enquiry.html" class="course-enquire">📋 Enquire Now</a>
       </div>
-
       <div class="course-card">
         <div class="course-board board-icse">CBSE &amp; CISCE</div>
         <div class="course-name">Preparation — Class 10</div>
         <div class="course-meta-row">
           <span class="course-meta-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Dec 4 – Jan 15 / 20</span>
         </div>
-        <div class="course-desc">In this period, boys and girls prepare for their upcoming examinations under the supervision of superspecialist, experienced subject teachers covering all subjects of Class 10 — CBSE and CISCE boards.</div>
-        <div class="course-subjects">
-          <span class="subj-tag">Mathematics</span><span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Biology</span><span class="subj-tag">English I &amp; II</span><span class="subj-tag">History &amp; Civics</span><span class="subj-tag">Hindi</span><span class="subj-tag">Social Science</span>
-        </div>
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2010%20Preparation." target="_blank" class="course-enquire">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enquire on WhatsApp
-        </a>
+        <div class="course-desc">Boys and girls prepare for their upcoming examinations under the supervision of superspecialist, experienced subject teachers covering all subjects — CBSE and CISCE boards.</div>
+        <div class="course-subjects"><span class="subj-tag">Mathematics</span><span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Biology</span><span class="subj-tag">English I &amp; II</span><span class="subj-tag">History &amp; Civics</span><span class="subj-tag">Hindi</span><span class="subj-tag">Social Science</span></div>
+        <a href="enquiry.html" class="course-enquire">📋 Enquire Now</a>
       </div>
-
       <div class="course-card">
         <div class="course-board board-cbse">CBSE &amp; CISCE</div>
         <div class="course-name">Targets — Class 10</div>
         <div class="course-meta-row">
           <span class="course-meta-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Duration: 30 – 40 Days</span>
         </div>
-        <div class="course-desc">Boys and girls stay with the teacher during their examinations. Superspecialist teachers share marks-scoring techniques for every subject in between the gap of two examinations — helping students achieve their targets.</div>
-        <div class="course-subjects">
-          <span class="subj-tag">Mathematics</span><span class="subj-tag">Science</span><span class="subj-tag">English</span><span class="subj-tag">Social Science</span><span class="subj-tag">Hindi</span>
-        </div>
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2010%20Targets%20program." target="_blank" class="course-enquire">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enquire on WhatsApp
-        </a>
+        <div class="course-desc">Boys and girls stay with the teacher during their examinations. Superspecialist teachers share marks-scoring techniques for every subject in between the gap of two examinations.</div>
+        <div class="course-subjects"><span class="subj-tag">Mathematics</span><span class="subj-tag">Science</span><span class="subj-tag">English</span><span class="subj-tag">Social Science</span><span class="subj-tag">Hindi</span></div>
+        <a href="enquiry.html" class="course-enquire">📋 Enquire Now</a>
       </div>
-
     </div>
 
     <!-- CLASS 12 -->
     <div id="tab-12" class="course-panel">
-
       <div class="course-card">
         <div class="course-board board-cbse">CBSE &amp; CISCE</div>
         <div class="course-name">Foundation Work — Class 12</div>
@@ -302,47 +244,29 @@
           <span class="course-meta-badge course-meta-badge--orange">During Durga Puja Vacation</span>
         </div>
         <div class="course-desc">We teach lower-class concepts that Class 12 boys and girls require during their final examinations — building a strong conceptual foundation before the exam season begins.</div>
-        <div class="course-subjects">
-          <span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">English</span><span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span>
-        </div>
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2012%20Foundation%20Work." target="_blank" class="course-enquire">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enquire on WhatsApp
-        </a>
+        <div class="course-subjects"><span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">English</span><span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span></div>
+        <a href="enquiry.html" class="course-enquire">📋 Enquire Now</a>
       </div>
-
       <div class="course-card">
         <div class="course-board board-icse">CBSE &amp; CISCE</div>
         <div class="course-name">Preparation — Class 12</div>
         <div class="course-meta-row">
           <span class="course-meta-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Dec 4 – Jan 15 / 20</span>
         </div>
-        <div class="course-desc">In this period, boys and girls prepare for their upcoming examinations under the supervision of superspecialist, experienced subject teachers covering all subjects of Class 12 — Science and Commerce streams, both CBSE and CISCE boards.</div>
-        <div class="course-subjects">
-          <span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span><span class="subj-tag">Business Studies</span><span class="subj-tag">English</span><span class="subj-tag">Computer Sc.</span>
-        </div>
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2012%20Preparation." target="_blank" class="course-enquire">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enquire on WhatsApp
-        </a>
+        <div class="course-desc">Boys and girls prepare for their upcoming examinations under the supervision of superspecialist, experienced subject teachers — Science and Commerce streams, both CBSE and CISCE boards.</div>
+        <div class="course-subjects"><span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span><span class="subj-tag">Business Studies</span><span class="subj-tag">English</span><span class="subj-tag">Computer Sc.</span></div>
+        <a href="enquiry.html" class="course-enquire">📋 Enquire Now</a>
       </div>
-
       <div class="course-card">
         <div class="course-board board-cbse">CBSE &amp; CISCE</div>
         <div class="course-name">Targets — Class 12</div>
         <div class="course-meta-row">
           <span class="course-meta-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Duration: 30 – 40 Days</span>
         </div>
-        <div class="course-desc">Boys and girls stay with the teacher during their examinations. Superspecialist teachers share marks-scoring techniques for every subject in between the gap of two examinations — helping students achieve their targets.</div>
-        <div class="course-subjects">
-          <span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span><span class="subj-tag">Business Studies</span><span class="subj-tag">English</span>
-        </div>
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enquire%20about%20Class%2012%20Targets%20program." target="_blank" class="course-enquire">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enquire on WhatsApp
-        </a>
+        <div class="course-desc">Boys and girls stay with the teacher during their examinations. Superspecialist teachers share marks-scoring techniques for every subject during the gap between two examinations.</div>
+        <div class="course-subjects"><span class="subj-tag">Physics</span><span class="subj-tag">Chemistry</span><span class="subj-tag">Mathematics</span><span class="subj-tag">Biology</span><span class="subj-tag">Accountancy</span><span class="subj-tag">Economics</span><span class="subj-tag">Business Studies</span><span class="subj-tag">English</span></div>
+        <a href="enquiry.html" class="course-enquire">📋 Enquire Now</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -356,50 +280,10 @@
       <p class="section-sub">These are our students who worked hard and aced their board exams. Your child could be next!</p>
     </div>
     <div class="toppers-grid">
-      <div class="topper-card">
-        <div class="topper-img-wrap">
-          <div class="topper-avatar">👦</div>
-          <div class="topper-badge">🏆 Class 10</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Aryan Sharma</div>
-          <div class="topper-marks">98.4% <span>/ 100</span></div>
-          <div class="topper-meta">CBSE Class 10 · 2024</div>
-        </div>
-      </div>
-      <div class="topper-card">
-        <div class="topper-img-wrap">
-          <div class="topper-avatar" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">👧</div>
-          <div class="topper-badge">🥇 Class 12</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Priya Gupta</div>
-          <div class="topper-marks">96.6% <span>/ 100</span></div>
-          <div class="topper-meta">ISC Class 12 · 2024</div>
-        </div>
-      </div>
-      <div class="topper-card">
-        <div class="topper-img-wrap">
-          <div class="topper-avatar" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🧑</div>
-          <div class="topper-badge">⭐ Class 10</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Rohan Mehta</div>
-          <div class="topper-marks">97.2% <span>/ 100</span></div>
-          <div class="topper-meta">ICSE Class 10 · 2023</div>
-        </div>
-      </div>
-      <div class="topper-card">
-        <div class="topper-img-wrap">
-          <div class="topper-avatar" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">👧</div>
-          <div class="topper-badge">🥈 Class 12</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Sneha Das</div>
-          <div class="topper-marks">94.8% <span>/ 100</span></div>
-          <div class="topper-meta">CBSE Class 12 · 2023</div>
-        </div>
-      </div>
+      <div class="topper-card"><div class="topper-img-wrap"><div class="topper-avatar">👦</div><div class="topper-badge">🏆 Class 10</div></div><div class="topper-info"><div class="topper-name">Aryan Sharma</div><div class="topper-marks">98.4% <span>/ 100</span></div><div class="topper-meta">CBSE Class 10 · 2024</div></div></div>
+      <div class="topper-card"><div class="topper-img-wrap"><div class="topper-avatar" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">👧</div><div class="topper-badge">🥇 Class 12</div></div><div class="topper-info"><div class="topper-name">Priya Gupta</div><div class="topper-marks">96.6% <span>/ 100</span></div><div class="topper-meta">ISC Class 12 · 2024</div></div></div>
+      <div class="topper-card"><div class="topper-img-wrap"><div class="topper-avatar" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🧑</div><div class="topper-badge">⭐ Class 10</div></div><div class="topper-info"><div class="topper-name">Rohan Mehta</div><div class="topper-marks">97.2% <span>/ 100</span></div><div class="topper-meta">ICSE Class 10 · 2023</div></div></div>
+      <div class="topper-card"><div class="topper-img-wrap"><div class="topper-avatar" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">👧</div><div class="topper-badge">🥈 Class 12</div></div><div class="topper-info"><div class="topper-name">Sneha Das</div><div class="topper-marks">94.8% <span>/ 100</span></div><div class="topper-meta">CBSE Class 12 · 2023</div></div></div>
     </div>
     <a href="gallery.html" class="view-gallery-btn">🏆 View Full Toppers Gallery →</a>
   </div>
@@ -411,13 +295,8 @@
     <h2>Ready to Give Your Child the Best Start?</h2>
     <p>Reach out today for a free counselling session. We'll guide you to the right course, board, and batch for your child.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/918145958152?text=Hello%21%20I%20want%20to%20enroll%20my%20child%20at%20Foundation%20Gurukul.%20Please%20guide%20me." target="_blank" class="btn" style="background:#fff;color:var(--saffron);font-weight:800;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Chat on WhatsApp Now
-      </a>
-      <a href="mailto:foundationgurukool@gmail.com" class="btn" style="background:rgba(255,255,255,0.2);color:var(--white);border:2px solid rgba(255,255,255,0.5);">
-        ✉️ Send an Email
-      </a>
+      <a href="enquiry.html" class="btn" style="background:#fff;color:var(--saffron);font-weight:800;">📋 Fill Enquiry Form</a>
+      <a href="mailto:foundationgurukul07@gmail.com" class="btn" style="background:rgba(255,255,255,0.2);color:var(--white);border:2px solid rgba(255,255,255,0.5);">✉️ Send an Email</a>
     </div>
   </div>
 </section>
@@ -425,8 +304,6 @@
 <!-- FOOTER -->
 <footer id="contact">
   <div class="footer-grid">
-
-    <!-- Brand -->
     <div class="footer-brand">
       <div style="margin-bottom:14px;display:flex;gap:12px;align-items:center;">
         <div style="font-size:1.5rem;">🪔</div>
@@ -434,39 +311,12 @@
       </div>
       <p>Dedicated coaching for Class 10th and 12th students under CBSE and CISCE boards. We nurture potential, build confidence, and deliver results.</p>
       <div class="social-links" style="margin-top:18px;">
-
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/share/17C4GoWUHJ/" target="_blank" class="social-btn social-fb" aria-label="Facebook">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.252h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-          </svg>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/foundationgurukool/" target="_blank" class="social-btn social-ig" aria-label="Instagram">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
-        </a>
-
-        <!-- YouTube -->
-        <a href="https://www.youtube.com/@FoundationGurukul" target="_blank" class="social-btn social-yt" aria-label="YouTube">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-          </svg>
-        </a>
-
-        <!-- WhatsApp -->
-        <a href="https://wa.me/918145958152?text=Hello%21%20I%20found%20Foundation%20Gurukul%20and%20want%20to%20know%20more." target="_blank" class="social-btn social-wa" aria-label="WhatsApp">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-        </a>
-
+        <a href="https://www.facebook.com/share/17C4GoWUHJ/" target="_blank" class="social-btn social-fb" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.252h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/foundationgurukool/" target="_blank" class="social-btn social-ig" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@FoundationGurukul" target="_blank" class="social-btn social-yt" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://wa.me/918145958152" target="_blank" class="social-btn social-wa" aria-label="WhatsApp"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
       </div>
     </div>
-
-    <!-- Quick Links -->
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
@@ -474,11 +324,10 @@
         <li><a href="#director">Director</a></li>
         <li><a href="#courses">Courses</a></li>
         <li><a href="gallery.html">Toppers Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry Form</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
-
-    <!-- Courses -->
     <div class="footer-col">
       <h4>Courses</h4>
       <ul>
@@ -490,49 +339,26 @@
         <li><a href="#courses">Class 12 — Targets</a></li>
       </ul>
     </div>
-
-    <!-- Contact -->
     <div class="footer-col">
       <h4>Contact Us</h4>
       <div class="footer-contact-item">
-        <div class="fci-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </div>
-        <div class="fci-text"><a href="mailto:foundationgurukool@gmail.com">foundationgurukool@gmail.com</a></div>
+        <div class="fci-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF8C42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <div class="fci-text"><a href="mailto:foundationgurukul07@gmail.com">foundationgurukul07@gmail.com</a></div>
       </div>
       <div class="footer-contact-item">
-        <div class="fci-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </div>
+        <div class="fci-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
         <div class="fci-text"><a href="https://wa.me/918145958152" target="_blank">WhatsApp Quick Chat</a></div>
       </div>
       <div class="footer-contact-item">
-        <div class="fci-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.252h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-        </div>
-        <div class="fci-text"><a href="https://www.facebook.com/share/17C4GoWUHJ/"
- target="_blank">Facebook Page</a></div>
+        <div class="fci-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.252h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></div>
+        <div class="fci-text"><a href="https://www.facebook.com/share/17C4GoWUHJ/" target="_blank">Facebook Page</a></div>
       </div>
       <div class="footer-contact-item">
-        <div class="fci-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <defs><linearGradient id="ig-footer" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs>
-            <path fill="url(#ig-footer)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
-        </div>
-        <div class="fci-text"><a href="https://www.instagram.com/foundationgurukool/"
- target="_blank">Instagram Page</a></div>
-      </div>
-      <div class="footer-contact-item">
-        <div class="fci-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </div>
+        <div class="fci-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
         <div class="fci-text"><a href="https://www.youtube.com/@FoundationGurukul" target="_blank">YouTube Channel</a></div>
       </div>
     </div>
-
   </div>
-
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 Foundation Gurukul. All rights reserved.</div>
     <div class="footer-legal-links">
@@ -544,20 +370,14 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/918145958152?text=Hello%20Foundation%20Gurukul!%20I%20would%20like%20to%20enquire%20about%20a%20course.%0A%0A*Please%20fill%20in%20the%20details%20below:*%0A%0AName:%20%0A%0ASchool:%20%0A%0AAddress:%20%0A%0AResidential%20or%20Day%20Scholar:%20%0A%0ACourse%20Interested%20In%20(Foundation%2FPreparation%2FTarget%2FAll):%20%0A%0APrevious%20Year%20Result%20(All%20Subject%20Marks):%20%0A%0AMobile%20Number:%20" 
-   target="_blank" 
-   class="float-wa">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918145958152?text=Hello%20Foundation%20Gurukul!%20I%20would%20like%20to%20enquire%20about%20a%20course." target="_blank" class="float-wa">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#ffffff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <div class="float-wa-label">Chat with us!</div>
- n
+
 <script>
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
-  }
+  function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
   function showTab(id, event) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.course-panel').forEach(p => p.classList.remove('active'));
