@@ -6,6 +6,258 @@
 <title>Toppers Gallery – Foundation Gurukul</title>
 <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* =============================================
+   GALLERY SECTION – UPDATED STYLES
+   ============================================= */
+
+/* ---------- Year Group ---------- */
+.gallery-year-group {
+  margin-bottom: 48px;
+}
+
+/* ---------- Year Header (clickable for older years) ---------- */
+.year-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  cursor: default; /* current year not clickable */
+}
+
+.year-header.collapsible {
+  cursor: pointer;
+  user-select: none;
+}
+
+.year-header.collapsible:hover .year-pill {
+  opacity: 0.85;
+}
+
+.year-pill {
+  background: linear-gradient(135deg, var(--saffron, #e67e22), #d35400);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 40px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.year-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, rgba(230,126,34,0.3), transparent);
+  border-radius: 2px;
+}
+
+.year-count {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  color: #999;
+  white-space: nowrap;
+}
+
+/* Chevron icon inside year pill for collapsible */
+.year-toggle-icon {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.85em;
+  transition: transform 0.3s ease;
+}
+
+.year-header.collapsed .year-toggle-icon {
+  transform: rotate(-90deg);
+}
+
+/* ---------- Collapsible body ---------- */
+.toppers-grid-wrapper {
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.3s ease;
+  max-height: 2000px; /* large enough */
+  opacity: 1;
+}
+
+.toppers-grid-wrapper.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* ---------- Toppers Grid ---------- */
+.toppers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+/* ---------- Topper Card ---------- */
+.topper-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.topper-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Rank highlights */
+.topper-card.rank-1 { border: 2px solid #f5a623; }
+.topper-card.rank-2 { border: 2px solid #b0b8c1; }
+.topper-card.rank-3 { border: 2px solid #cd7f32; }
+
+/* ---------- Avatar / Photo ---------- */
+/*
+  IMAGE GUIDE:
+  - Recommended size: 400 × 300 px (4:3 ratio)
+  - Format: JPG or PNG, file size < 150 KB
+  - The container below is a fixed-aspect box.
+    Your image will fill it perfectly at any screen size.
+*/
+.topper-avatar {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* enforces 4:3 regardless of image size */
+  background: #f0ede8;
+  overflow: hidden;
+}
+
+.topper-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* crops to fill, no stretching */
+  object-position: top center; /* keeps face visible */
+  display: block;
+}
+
+/* Placeholder when no image is supplied – shows emoji centred */
+.topper-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+}
+
+/* Board chip */
+.board-chip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chip-cbse  { background: #1b6ca8; color: #fff; }
+.chip-icse  { background: #e67e22; color: #fff; }
+.chip-isc   { background: #2e7d32; color: #fff; }
+
+/* ---------- Card Info ---------- */
+.topper-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.topper-name {
+  font-family: 'Yeseva One', serif;
+  font-size: 1.05rem;
+  color: #1a1a2e;
+  line-height: 1.2;
+}
+
+.topper-score {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #e67e22;
+  line-height: 1;
+}
+
+.topper-score small {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 600;
+}
+
+.topper-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.topper-class {
+  background: #fff3e0;
+  color: #e67e22;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.topper-year-tag {
+  font-size: 0.78rem;
+  color: #aaa;
+  font-family: 'Nunito', sans-serif;
+  margin-left: auto;
+}
+
+.topper-quote {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  color: #777;
+  font-style: italic;
+  line-height: 1.45;
+  margin-top: 4px;
+}
+
+/* ---------- Gallery Section Wrapper ---------- */
+.gallery-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .toppers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .topper-name { font-size: 0.88rem; }
+  .topper-score { font-size: 1rem; }
+  .topper-quote { font-size: 0.75rem; }
+  .topper-info { padding: 10px; gap: 4px; }
+
+  .year-pill { font-size: 0.88rem; padding: 8px 14px; }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .toppers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -18,7 +270,6 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#courses">Courses</a></li>
-    <!-- <li><a href="index.html#course-details">Course Details</a></li> -->
     <li><a href="gallery.html" class="active">Gallery</a></li>
     <li><a href="#teachers">Teachers</a></li>
     <li><a href="#accommodation">Accommodation</a></li>
@@ -48,389 +299,446 @@
   <div class="stats-item"><div class="stats-num">2024–26</div><div class="stats-lbl">Years of Results</div></div>
 </div>
 
-<!-- FILTER BAR -->
-<div class="filter-bar">
-  <span class="filter-label">Filter by:</span>
-  <button class="filter-btn active" onclick="filterToppers('all', this)">All</button>
-  <button class="filter-btn" onclick="filterToppers('class-10', this)">Class 10</button>
-  <button class="filter-btn" onclick="filterToppers('class-12', this)">Class 12</button>
-  <button class="filter-btn" onclick="filterToppers('cbse', this)">CBSE</button>
-  <button class="filter-btn" onclick="filterToppers('icse', this)">ICSE</button>
-  <button class="filter-btn" onclick="filterToppers('isc', this)">ISC</button>
-  <button class="filter-btn" onclick="filterToppers('2025', this)">2026</button>
-  <button class="filter-btn" onclick="filterToppers('2025', this)">2025</button>
-  <button class="filter-btn" onclick="filterToppers('2024', this)">2024</button>
-</div>
-
-<!-- GALLERY CONTENT -->
+<!-- =============================================
+     GALLERY CONTENT
+     - Current year (2026): always expanded
+     - Older years (2025, 2024): collapsible
+     ============================================= -->
 <div class="gallery-section">
 
-  <!-- 2024 -->
-  <div class="gallery-year-group" data-year="2026">
-    <div class="year-header">
+  <!-- ══════════════════════════════════════════
+       YEAR 2026 — CURRENT YEAR (always open)
+       ══════════════════════════════════════════
+       HOW TO ADD A STUDENT:
+       1. Copy one <div class="topper-card"> block.
+       2. Set data-year="2026" data-class="class-10" data-board="icse" (or cbse/isc).
+       3. Inside .topper-avatar: replace <img src="..."> with your photo path.
+          Photo size: 400×300 px, JPG/PNG, < 150 KB.
+          If no photo yet, use the placeholder div instead.
+       4. Fill in name, score (optional), class, and quote.
+  -->
+  <div class="gallery-year-group" id="group-2026">
+    <div class="year-header"> <!-- NO collapsible class = always open -->
       <div class="year-pill">🎓 Board Exam 2026</div>
       <div class="year-line"></div>
       <div class="year-count">8 Achievers</div>
     </div>
-    <div class="toppers-grid">
 
-      <div class="topper-card" data-year="2026" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-          <img src="images/Lamphu_10.png" alt="Avatar" />
-          <div class="board-chip chip-cbse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Yumlam Lampu</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"Foundation Gurukul helped me master every chapter with confidence."</div>
-        </div>
-      </div>
+    <div class="toppers-grid-wrapper" id="grid-2026"> <!-- no 'collapsed' class -->
+      <div class="toppers-grid">
 
-      <div class="topper-card" data-year="2026" data-class="class-12" data-board="icse">
-        <div class="topper-avatar">
-          <img src="images/Aditya_yadav_10.png" alt="Avatar" />
-          <div class="board-chip chip-isc">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Aditya Yadav</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"The dedicated teachers here made all the difference in my journey."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2026" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-           <img src="images/Shashank_Mehta_257x192.png" alt="Avatar" />
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Shashank Mehta</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"Mock tests here were harder than the real board exam!"</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2026" data-class="class-12" data-board="icse">
-        <div class="topper-avatar">
-          <img src="images/Juzer_Ali_10.png" alt="Avatar" />
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Juzair Ali</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"The personal attention at Gurukul is something no big institute offers."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2026" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-          <img src="images/Shakib_Ali_10.png" alt="Avatar" />
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Shakib Ali</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"I improved by 15% after joining Foundation Gurukul mid-session."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2026" data-class="class-12" data-board="icse">
-        <div class="topper-avatar">
-          <img src="images/Hasib_12.png" alt="Avatar" />
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Sk Hasibur Rahman</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"Best decision of my life was enrolling here for ISC preparation!"</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2026" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-          <img src="images/Sparsh_kumar_10.png" alt="Avatar" />
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Sparsh Kumar</div>
-          <div class="topper-score"> <small></small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"Doubt sessions helped me crack even the toughest ICSE questions."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2026" data-class="class-12" data-board="cbse">
-        <div class="topper-avatar">
-          👦
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Dev Chauhan</div>
-          <div class="topper-score">90.8% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2026</span>
-          </div>
-          <div class="topper-quote">"My parents were always updated thanks to their WhatsApp reports."</div>
-        </div>
-      </div>
-
-    </div>
+        <!-- ── STUDENT 1 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Lamphu_10.png" alt="Yumlam Lampu" />
+    <div class="board-chip chip-icse">ICSE</div>
   </div>
+  <div class="topper-info">
+    <div class="topper-name">Yumlam Lampu</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 10</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"Foundation Gurukul helped me master every chapter with confidence."</div>
+  </div>
+</div>
 
-  <!-- 2023 -->
-  <div class="gallery-year-group" data-year="2025">
-    <div class="year-header">
-      <div class="year-pill">🎓 Board Exam 2025</div>
+<!-- ── STUDENT 2 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Aditya_yadav_10.png" alt="Aditya Yadav" />
+    <div class="board-chip chip-icse">ICSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Aditya Yadav</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 10</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"The dedicated teachers here made all the difference in my journey."</div>
+  </div>
+</div>
+
+<!-- ── STUDENT 3 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Shashank_Mehta_257x192.png" alt="Shashank Mehta" />
+    <div class="board-chip chip-icse">ICSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Shashank Mehta</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 10</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"Mock tests here were harder than the real board exam!"</div>
+  </div>
+</div>
+
+<!-- ── STUDENT 4 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Juzer_Ali_10.png" alt="Juzair Ali" />
+    <div class="board-chip chip-icse">ICSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Juzair Ali</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 10</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"The personal attention at Gurukul is something no big institute offers."</div>
+  </div>
+</div>
+
+<!-- ── STUDENT 5 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Shakib_Ali_10.png" alt="Shakib Ali" />
+    <div class="board-chip chip-icse">ICSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Shakib Ali</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 10</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"I improved by 15% after joining Foundation Gurukul mid-session."</div>
+  </div>
+</div>
+
+<!-- ── STUDENT 6 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Hasib_12.png" alt="Sk Hasibur Rahman" />
+    <div class="board-chip chip-icse">ICSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Sk Hasibur Rahman</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 12</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"Best decision of my life was enrolling here for ISC preparation!"</div>
+  </div>
+</div>
+
+<!-- ── STUDENT 7 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <img src="images/Sparsh_kumar_10.png" alt="Sparsh Kumar" />
+    <div class="board-chip chip-icse">ICSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Sparsh Kumar</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 10</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"Doubt sessions helped me crack even the toughest ICSE questions."</div>
+  </div>
+</div>
+
+<!-- ── STUDENT 8 ── -->
+<div class="topper-card">
+  <div class="topper-avatar">
+    <div class="topper-avatar-placeholder">👦</div>
+    <div class="board-chip chip-cbse">CBSE</div>
+  </div>
+  <div class="topper-info">
+    <div class="topper-name">Dev Chauhan</div>
+    <!-- ✏️ RESULT: Replace 00.0 with actual percentage when result is out -->
+    <div class="topper-score" style="display:none;">00.0% <small>/ 100</small></div>
+    <div class="topper-meta-row">
+      <span class="topper-class">Class 12</span>
+      <span class="topper-year-tag">2026</span>
+    </div>
+    <div class="topper-quote">"My parents were always updated thanks to their WhatsApp reports."</div>
+  </div>
+</div>
+
+        <!-- ══ TO ADD A NEW 2026 STUDENT, COPY THE BLOCK BELOW ══
+
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <img src="images/YOUR_PHOTO.jpg" alt="Student Name" />
+            <div class="board-chip chip-icse">ICSE</div>  ← change to chip-cbse or chip-isc
+          </div>
+          <div class="topper-info">
+            <div class="topper-name">Student Full Name</div>
+            <div class="topper-score">92.4% <small>/ 100</small></div>  ← optional
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>  ← or Class 12
+              <span class="topper-year-tag">2026</span>
+            </div>
+            <div class="topper-quote">"Quote from student here."</div>
+          </div>
+        </div>
+
+        ══════════════════════════════════════════ -->
+
+      </div>
+    </div>
+  </div><!-- /group-2026 -->
+
+
+  <!-- ══════════════════════════════════════════
+       YEAR 2025 — COLLAPSIBLE (click to expand)
+       ══════════════════════════════════════════ -->
+  <div class="gallery-year-group" id="group-2025">
+    <div class="year-header collapsible collapsed" onclick="toggleYear('2025', this)">
+      <div class="year-pill">🎓 Board Exam 2025 <span class="year-toggle-icon">▼</span></div>
       <div class="year-line"></div>
       <div class="year-count">7 Achievers</div>
     </div>
-    <div class="toppers-grid">
 
-      <div class="topper-card rank-1" data-year="2025" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-          🧒
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Rohan Mehta</div>
-          <div class="topper-score">97.2% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2025</span>
+    <div class="toppers-grid-wrapper collapsed" id="grid-2025">
+      <div class="toppers-grid">
+
+        <!-- ── STUDENT 1 (rank 1) ── -->
+        <div class="topper-card rank-1">
+          <div class="topper-avatar">
+            <!-- ADD PHOTO: <img src="images/Rohan_Mehta.jpg" alt="Rohan Mehta" /> -->
+            <div class="topper-avatar-placeholder">🧒</div>
+            <div class="board-chip chip-icse">ICSE</div>
           </div>
-          <div class="topper-quote">"The structured syllabus and regular tests gave me clarity and focus."</div>
-        </div>
-      </div>
-
-      <div class="topper-card rank-2" data-year="2025" data-class="class-12" data-board="cbse">
-        <div class="topper-avatar">
-          👧
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Sneha Das</div>
-          <div class="topper-score">94.8% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2025</span>
+          <div class="topper-info">
+            <div class="topper-name">Rohan Mehta</div>
+            <div class="topper-score">97.2% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"The structured syllabus and regular tests gave me clarity and focus."</div>
           </div>
-          <div class="topper-quote">"I loved how teachers explained every topic from scratch without judgment."</div>
         </div>
-      </div>
 
-      <div class="topper-card rank-3" data-year="2025" data-class="class-10" data-board="cbse">
-        <div class="topper-avatar">
-          👦
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Akash Tiwari</div>
-          <div class="topper-score">93.6% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2025</span>
+        <!-- ── STUDENT 2 (rank 2) ── -->
+        <div class="topper-card rank-2">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👧</div>
+            <div class="board-chip chip-cbse">CBSE</div>
           </div>
-          <div class="topper-quote">"The small batch size meant I never hesitated to ask questions."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2025" data-class="class-12" data-board="isc">
-        <div class="topper-avatar">
-          👧
-          <div class="board-chip chip-isc">ISC</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Meera Pillai</div>
-          <div class="topper-score">92.0% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2025</span>
+          <div class="topper-info">
+            <div class="topper-name">Sneha Das</div>
+            <div class="topper-score">94.8% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 12</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"I loved how teachers explained every topic from scratch without judgment."</div>
           </div>
-          <div class="topper-quote">"Joining Gurukul was the smartest study decision I made."</div>
         </div>
-      </div>
 
-      <div class="topper-card" data-year="2025" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-          🧑
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Sahil Kumar</div>
-          <div class="topper-score">91.2% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2025</span>
+        <!-- ── STUDENT 3 (rank 3) ── -->
+        <div class="topper-card rank-3">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👦</div>
+            <div class="board-chip chip-cbse">CBSE</div>
           </div>
-          <div class="topper-quote">"Regular feedback from teachers helped me track my weak areas."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2025" data-class="class-12" data-board="cbse">
-        <div class="topper-avatar">
-          👦
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Varun Bose</div>
-          <div class="topper-score">90.4% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2025</span>
+          <div class="topper-info">
+            <div class="topper-name">Akash Tiwari</div>
+            <div class="topper-score">93.6% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"The small batch size meant I never hesitated to ask questions."</div>
           </div>
-          <div class="topper-quote">"I passed with distinction in all subjects — truly grateful!"</div>
         </div>
-      </div>
 
-      <div class="topper-card" data-year="2025" data-class="class-10" data-board="cbse">
-        <div class="topper-avatar">
-          👧
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Ananya Roy</div>
-          <div class="topper-score">90.0% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2025</span>
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👧</div>
+            <div class="board-chip chip-isc">ISC</div>
           </div>
-          <div class="topper-quote">"Foundation Gurukul gave me the structured routine I always needed."</div>
+          <div class="topper-info">
+            <div class="topper-name">Meera Pillai</div>
+            <div class="topper-score">92.0% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 12</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"Joining Gurukul was the smartest study decision I made."</div>
+          </div>
         </div>
-      </div>
 
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">🧑</div>
+            <div class="board-chip chip-icse">ICSE</div>
+          </div>
+          <div class="topper-info">
+            <div class="topper-name">Sahil Kumar</div>
+            <div class="topper-score">91.2% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"Regular feedback from teachers helped me track my weak areas."</div>
+          </div>
+        </div>
+
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👦</div>
+            <div class="board-chip chip-cbse">CBSE</div>
+          </div>
+          <div class="topper-info">
+            <div class="topper-name">Varun Bose</div>
+            <div class="topper-score">90.4% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 12</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"I passed with distinction in all subjects — truly grateful!"</div>
+          </div>
+        </div>
+
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👧</div>
+            <div class="board-chip chip-cbse">CBSE</div>
+          </div>
+          <div class="topper-info">
+            <div class="topper-name">Ananya Roy</div>
+            <div class="topper-score">90.0% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>
+              <span class="topper-year-tag">2025</span>
+            </div>
+            <div class="topper-quote">"Foundation Gurukul gave me the structured routine I always needed."</div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </div><!-- /group-2025 -->
 
-  <!-- 2022 -->
-  <div class="gallery-year-group" data-year="2024">
-    <div class="year-header">
-      <div class="year-pill">🎓 Board Exam 2024</div>
+
+  <!-- ══════════════════════════════════════════
+       YEAR 2024 — COLLAPSIBLE (click to expand)
+       ══════════════════════════════════════════ -->
+  <div class="gallery-year-group" id="group-2024">
+    <div class="year-header collapsible collapsed" onclick="toggleYear('2024', this)">
+      <div class="year-pill">🎓 Board Exam 2024 <span class="year-toggle-icon">▼</span></div>
       <div class="year-line"></div>
       <div class="year-count">5 Achievers</div>
     </div>
-    <div class="toppers-grid">
 
-      <div class="topper-card rank-1" data-year="2024" data-class="class-12" data-board="cbse">
-        <div class="topper-avatar">
-          👦
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Rahul Kapoor</div>
-          <div class="topper-score">96.0% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2024</span>
+    <div class="toppers-grid-wrapper collapsed" id="grid-2024">
+      <div class="toppers-grid">
+
+        <div class="topper-card rank-1">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👦</div>
+            <div class="board-chip chip-cbse">CBSE</div>
           </div>
-          <div class="topper-quote">"After 2 years at Gurukul, boards felt like just another test!"</div>
-        </div>
-      </div>
-
-      <div class="topper-card rank-2" data-year="2024" data-class="class-10" data-board="icse">
-        <div class="topper-avatar">
-          👧
-          <div class="board-chip chip-icse">ICSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Ishika Sharma</div>
-          <div class="topper-score">94.4% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2024</span>
+          <div class="topper-info">
+            <div class="topper-name">Rahul Kapoor</div>
+            <div class="topper-score">96.0% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 12</span>
+              <span class="topper-year-tag">2024</span>
+            </div>
+            <div class="topper-quote">"After 2 years at Gurukul, boards felt like just another test!"</div>
           </div>
-          <div class="topper-quote">"I went from 72% to 94% in one year. The teachers never gave up on me."</div>
         </div>
-      </div>
 
-      <div class="topper-card rank-3" data-year="2024" data-class="class-12" data-board="isc">
-        <div class="topper-avatar">
-          🧒
-          <div class="board-chip chip-isc">ISC</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Kartik Nair</div>
-          <div class="topper-score">93.2% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2024</span>
+        <div class="topper-card rank-2">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👧</div>
+            <div class="board-chip chip-icse">ICSE</div>
           </div>
-          <div class="topper-quote">"The ISC-specific preparation here is far superior to other centres."</div>
-        </div>
-      </div>
-
-      <div class="topper-card" data-year="2024" data-class="class-10" data-board="cbse">
-        <div class="topper-avatar">
-          👧
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Shruti Pandey</div>
-          <div class="topper-score">91.8% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 10</span>
-            <span class="topper-year-tag">2024</span>
+          <div class="topper-info">
+            <div class="topper-name">Ishika Sharma</div>
+            <div class="topper-score">94.4% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>
+              <span class="topper-year-tag">2024</span>
+            </div>
+            <div class="topper-quote">"I went from 72% to 94% in one year. The teachers never gave up on me."</div>
           </div>
-          <div class="topper-quote">"Being in a small batch gave me the courage to ask silly questions."</div>
         </div>
-      </div>
 
-      <div class="topper-card" data-year="2024" data-class="class-12" data-board="cbse">
-        <div class="topper-avatar">
-          👦
-          <div class="board-chip chip-cbse">CBSE</div>
-        </div>
-        <div class="topper-info">
-          <div class="topper-name">Aditya Mishra</div>
-          <div class="topper-score">90.2% <small>/ 100</small></div>
-          <div class="topper-meta-row">
-            <span class="topper-class">Class 12</span>
-            <span class="topper-year-tag">2024</span>
+        <div class="topper-card rank-3">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">🧒</div>
+            <div class="board-chip chip-isc">ISC</div>
           </div>
-          <div class="topper-quote">"My parents trusted Gurukul because they got updates every single week."</div>
+          <div class="topper-info">
+            <div class="topper-name">Kartik Nair</div>
+            <div class="topper-score">93.2% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 12</span>
+              <span class="topper-year-tag">2024</span>
+            </div>
+            <div class="topper-quote">"The ISC-specific preparation here is far superior to other centres."</div>
+          </div>
         </div>
-      </div>
 
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👧</div>
+            <div class="board-chip chip-cbse">CBSE</div>
+          </div>
+          <div class="topper-info">
+            <div class="topper-name">Shruti Pandey</div>
+            <div class="topper-score">91.8% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 10</span>
+              <span class="topper-year-tag">2024</span>
+            </div>
+            <div class="topper-quote">"Being in a small batch gave me the courage to ask silly questions."</div>
+          </div>
+        </div>
+
+        <div class="topper-card">
+          <div class="topper-avatar">
+            <div class="topper-avatar-placeholder">👦</div>
+            <div class="board-chip chip-cbse">CBSE</div>
+          </div>
+          <div class="topper-info">
+            <div class="topper-name">Aditya Mishra</div>
+            <div class="topper-score">90.2% <small>/ 100</small></div>
+            <div class="topper-meta-row">
+              <span class="topper-class">Class 12</span>
+              <span class="topper-year-tag">2024</span>
+            </div>
+            <div class="topper-quote">"My parents trusted Gurukul because they got updates every single week."</div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </div><!-- /group-2024 -->
 
-  <!-- No results message -->
-  <div id="no-results" style="display:none; text-align:center; padding: 60px 0;">
-    <div style="font-size: 3rem; margin-bottom: 16px;">🔍</div>
-    <div style="font-family: 'Yeseva One', serif; font-size: 1.4rem; color: var(--deep); margin-bottom: 8px;">No results found</div>
-    <div style="color: var(--muted);">Try selecting a different filter above.</div>
-  </div>
+</div><!-- /gallery-section -->
 
-</div>
 
-<!-- TEACHERS SECTION -->
+<!-- =============================================
+     TEACHERS SECTION
+     IMAGE GUIDE FOR TEACHERS:
+     - Recommended: 400×400 px (1:1 square)
+     - Format: JPG, < 120 KB
+     - Replace the emoji inside .teacher-photo with:
+       <img src="images/teacher_name.jpg" alt="Teacher Name"
+            style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+     ============================================= -->
 <section id="teachers" class="teachers-section">
   <div class="section-inner">
     <div class="section-header">
@@ -443,7 +751,7 @@
       <div class="teacher-card">
         <div class="teacher-photo-wrap">
           <div class="teacher-photo" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
-            <!-- ✏️ Replace with: <img src="images/teacher1.jpg" alt="Teacher Name"> -->
+            <!-- ✏️ REPLACE WITH: <img src="images/teacher_rajesh.jpg" alt="Mr Rajesh Kumar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"> -->
             👨‍🏫
           </div>
           <div class="teacher-subject-badge">Mathematics</div>
@@ -561,7 +869,16 @@
   </div>
 </section>
 
-<!-- ACCOMMODATION SECTION -->
+
+<!-- =============================================
+     ACCOMMODATION SECTION
+     IMAGE GUIDE FOR AMENITIES / ROOMS:
+     - Recommended: 800×500 px (16:10 landscape)
+     - Format: JPG, < 200 KB
+     - Replace the placeholder div inside .room-photo with:
+       <img src="images/room_double.jpg" alt="Double Occupancy Room"
+            style="width:100%;height:100%;object-fit:cover;">
+     ============================================= -->
 <section id="accommodation" class="accommodation-section">
   <div class="section-inner">
     <div class="section-header">
@@ -570,40 +887,20 @@
       <p class="section-sub">We understand that many students travel from afar. Our hostel facility provides a safe, clean, and nurturing residential environment so students can focus entirely on their studies.</p>
     </div>
 
-    <!-- Accommodation highlights strip -->
     <div class="accom-highlights">
-      <div class="accom-hl-item">
-        <div class="accom-hl-icon">🏠</div>
-        <div class="accom-hl-text">Safe & Secure Campus</div>
-      </div>
-      <div class="accom-hl-item">
-        <div class="accom-hl-icon">🍱</div>
-        <div class="accom-hl-text">Nutritious Meals Daily</div>
-      </div>
-      <div class="accom-hl-item">
-        <div class="accom-hl-icon">📶</div>
-        <div class="accom-hl-text">High-Speed WiFi</div>
-      </div>
-      <div class="accom-hl-item">
-        <div class="accom-hl-icon">🌙</div>
-        <div class="accom-hl-text">Night Study Hours</div>
-      </div>
-      <div class="accom-hl-item">
-        <div class="accom-hl-icon">🏥</div>
-        <div class="accom-hl-text">Medical Support</div>
-      </div>
-      <div class="accom-hl-item">
-        <div class="accom-hl-icon">👀</div>
-        <div class="accom-hl-text">24/7 Supervision</div>
-      </div>
+      <div class="accom-hl-item"><div class="accom-hl-icon">🏠</div><div class="accom-hl-text">Safe & Secure Campus</div></div>
+      <div class="accom-hl-item"><div class="accom-hl-icon">🍱</div><div class="accom-hl-text">Nutritious Meals Daily</div></div>
+      <div class="accom-hl-item"><div class="accom-hl-icon">📶</div><div class="accom-hl-text">High-Speed WiFi</div></div>
+      <div class="accom-hl-item"><div class="accom-hl-icon">🌙</div><div class="accom-hl-text">Night Study Hours</div></div>
+      <div class="accom-hl-item"><div class="accom-hl-icon">🏥</div><div class="accom-hl-text">Medical Support</div></div>
+      <div class="accom-hl-item"><div class="accom-hl-icon">👀</div><div class="accom-hl-text">24/7 Supervision</div></div>
     </div>
 
-    <!-- Room cards grid -->
     <div class="rooms-grid">
 
       <div class="room-card room-card-featured">
         <div class="room-photo" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
-          <!-- ✏️ Replace with: <img src="images/room-double.jpg" alt="Double Occupancy Room"> -->
+          <!-- ✏️ REPLACE WITH: <img src="images/room_double.jpg" alt="Double Occupancy Room" style="width:100%;height:100%;object-fit:cover;"> -->
           <div class="room-photo-inner">
             <div class="room-emoji">🛏️</div>
             <div class="room-photo-label">Add Room Photo Here</div>
@@ -720,7 +1017,6 @@
 
     </div>
 
-    <!-- Accommodation CTA -->
     <div class="accom-cta-strip">
       <div class="accom-cta-text">
         <div class="accom-cta-title">Interested in Hostel Accommodation?</div>
@@ -751,7 +1047,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 Foundation Gurukul · <a href="/cdn-cgi/l/email-protection#06606973686267726f6968617374736d69696a46616b676f6a2865696b" style="color: rgba(255,255,255,0.45); text-decoration:none;"><span class="__cf_email__" data-cfemail="c4a2abb1aaa0a5b0adabaaa3b1b6b1afababa884a3a9a5ada8eaa7aba9">[email&#160;protected]</span></a></div>
+    <div class="footer-copy">© 2025 Foundation Gurukul · <a href="mailto:info@foundationgurukul.com" style="color: rgba(255,255,255,0.45); text-decoration:none;">info@foundationgurukul.com</a></div>
     <div class="social-row">
       <a href="https://facebook.com/foundationgurukul" target="_blank" class="social-btn social-fb" aria-label="Facebook">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
@@ -782,29 +1078,21 @@
 </a>
 
 <script>
-  function filterToppers(filter, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  /**
+   * Toggle a year group open/closed.
+   * Called by: onclick="toggleYear('2025', this)"  on the .year-header div
+   */
+  function toggleYear(year, headerEl) {
+    const grid = document.getElementById('grid-' + year);
+    const isCollapsed = grid.classList.contains('collapsed');
 
-    const allCards = document.querySelectorAll('.topper-card');
-    const allGroups = document.querySelectorAll('.gallery-year-group');
-    let anyVisible = false;
-
-    allCards.forEach(card => {
-      const matchYear  = filter === 'all' || card.dataset.year  === filter;
-      const matchClass = filter === 'all' || card.dataset.class === filter;
-      const matchBoard = filter === 'all' || card.dataset.board === filter;
-      const show = filter === 'all' || matchYear || matchClass || matchBoard;
-      card.classList.toggle('hidden', !show);
-      if (show) anyVisible = true;
-    });
-
-    allGroups.forEach(group => {
-      const visibleCards = [...group.querySelectorAll('.topper-card')].filter(c => !c.classList.contains('hidden'));
-      group.style.display = visibleCards.length === 0 ? 'none' : '';
-    });
-
-    document.getElementById('no-results').style.display = anyVisible ? 'none' : 'block';
+    if (isCollapsed) {
+      grid.classList.remove('collapsed');
+      headerEl.classList.remove('collapsed');
+    } else {
+      grid.classList.add('collapsed');
+      headerEl.classList.add('collapsed');
+    }
   }
 </script>
 </body>
